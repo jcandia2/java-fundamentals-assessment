@@ -43,7 +43,6 @@ public class Assessment {
     public static ArrayList<User> capitalizeRecords(ArrayList<User> arrayListOfUsers) {
         ArrayList<User> capitalizedListOfUsers = new ArrayList<>();
 
-
         for (User user: arrayListOfUsers) {
             User newUser = new User(capitalize(user.getFirstName()),capitalize(user.getLastName()),user.isAdmin());
             capitalizedListOfUsers.add(newUser);
@@ -52,11 +51,6 @@ public class Assessment {
         return capitalizedListOfUsers;
 
     }
-//    On your Assessment class create a static method named capitalizeRecords
-//    The method should both accept and return an ArrayList of User objects.
-//    The returned list should have the same User objects in it, but each user's firstName and
-//    lastName properties should be properly capitalized.
-//    (i.e. the first letter of each property should be upper case)
 
     public static void main(String[] args) {
         System.out.println(square(5));
@@ -66,7 +60,7 @@ public class Assessment {
         System.out.println(average(newArray));
 
         User newUser1 = new User("user1","user1LastName", true);
-        User newUser2 = new User("user2","", true);
+        User newUser2 = new User("user2","user2LastName", false);
         User newUser3 = new User("user3","user3LastName", true);
 
         ArrayList<User> testList = new ArrayList<>();
@@ -74,11 +68,14 @@ public class Assessment {
         testList.add(newUser2);
         testList.add(newUser3);
 
+
+        System.out.println("Original List:");
         for (User user: testList) {
             System.out.print(user.getFirstName() + " " + user.getLastName() + " is admin: " + user.isAdmin());
             System.out.println();
         }
 
+        System.out.println("Capitalized Records List:");
         for (User user: capitalizeRecords(testList)) {
             System.out.print(user.getFirstName() + " " + user.getLastName() + " is admin: " + user.isAdmin());
             System.out.println();

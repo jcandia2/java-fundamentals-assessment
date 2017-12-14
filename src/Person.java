@@ -1,9 +1,5 @@
-import static java.lang.String.*;
-
 public class Person implements Greeter {
-
 //    Create a class named Person
-//
 //    This class should have two protected string properties: firstName and lastName.
 //    Add a constructor method that takes in two strings that will be used to set the firstName and
 //    lastName properties.
@@ -19,7 +15,7 @@ public static void main(String[] args) {
 
     public Person(String firstName, String lastName) throws IllegalArgumentException {
        if (firstName == null || lastName == null) {
-           throw new IllegalArgumentException("Invalid entry");
+           throw new IllegalArgumentException("Invalid entry for first name or last name");
        } else {
            this.firstName = firstName;
            this.lastName = lastName;
