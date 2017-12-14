@@ -24,9 +24,10 @@ public class User extends Person {
 
 
     public static void main(String[] args) {
-        User newUser = new User("juan",null,true);
+        User newUser = new User("juan","candia",true);
         System.out.println(newUser.getFirstName());
         System.out.println(newUser.getLastName());
         System.out.println(newUser.isAdmin());
+        System.out.println(newUser.sayHello());
     }
 }

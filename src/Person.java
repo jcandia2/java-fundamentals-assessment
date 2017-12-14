@@ -1,6 +1,6 @@
 import static java.lang.String.*;
 
-public class Person {
+public class Person implements Greeter {
 
 //    Create a class named Person
 //
@@ -40,5 +40,11 @@ public static void main(String[] args) {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public String sayHello() {
+        String message = "Hello from " + this.firstName + " " + this.lastName;
+        return message;
     }
 }
